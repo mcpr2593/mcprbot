@@ -4,7 +4,7 @@ const options = require('./utils/options')
 const msgHandler = require('./handler/message')
 
 const start = (client = new Client()) => {
-    console.log('[:] SELAMAT DATANG DI RFP-BOT ^_^')
+    console.log('[:] SELAMAT DATANG DI MCPR-BOT ^_^')
     console.log('[:] WHATSAPP TELAH TERSAMBUNG !')
 
     // Force it to keep the current session
@@ -32,8 +32,8 @@ const start = (client = new Client()) => {
             .then((ids) => {
                 console.log('[INFO]', color(`Anda telah di invite grub. [ ${name} : ${ids.length} ]`, 'yellow'))
                 // conditions if the group members are less than 10 then the bot will leave the group
-                if (ids.length <= 200) {
-                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Minimal anggota grub agar bot dapat masuk adalah 200 member.').then(() => client.leaveGroup(id))
+                if (ids.length <= 40) {
+                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Minimal anggota grub agar bot dapat masuk adalah 40 member.').then(() => client.leaveGroup(id))
                 } else {
                     client.sendText(id, `🔰 -----[ *WELCOME TO GRUB ‼️* ]----- 🔰\n\nHalo warga grup *${name}* 👋️\nJangan lupa baca deskripsi group terlebih dahulu, dan patuhi rules yang ada.\n\n🔱 *Rules Grub:*\n\n✅ Menghormati anggota satu sama lain.\n✅ Tidak diperkenankan mem-posting hal-hal yang berbau dan mengandung unsur Politik, SARA, Kontroversial, pornografi LGBT dan disturbing picture (dalam bentuk apapun)\n✅ Larangan memposting sesuatu yang  berdampak negatif bagi anggota lain.\n✅ Tidak bercanda berlebihan yang dapat memicu perdebatan.\n\n🔰 -----[ *POWERED BY RFP BOT 😎* ]----- 🔰`)
                 }
