@@ -931,7 +931,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 await client.reply(from, `🍻 Permintaan anda sedang di proses, ditunggu aja gan.`, id)
                     arti(args.splice(0).join(' '))
                     .then(result => {
-                        result.map(({ code, link }) => {
+                        result.map(({ code, result }) => {
                             let msg = `🔰 -----[ *Short Link BY ${BotName}* ]----- 🔰\n\nArti Nama :\n\n${result}\n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
                             client.reply(from, msg, id).then(() => {
                             console.log(`Arti nama telah dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
