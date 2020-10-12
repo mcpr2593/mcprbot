@@ -129,6 +129,9 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         case 'mowner':
             await client.sendText(from, menuId.textOwner(BotName))
             break
+        case 'readme':
+            await client.textReadme(from, menuId.textOwner(BotName))
+            break
         // End List Daftar Menu Bot
 
         // Start Menu Owner Bot
@@ -778,7 +781,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break;
         case 'quotesmaker':
             if (!args[0] || !args[1] || !args[2]) {
-                client.reply(from, '✅ *Contoh:* !quotesmaker random rfpbot i love you', id)
+                client.reply(from, '✅ *Contoh:* !quotesmaker random mcprbot i love you', id)
             } else {
                 console.log(`Quotesmaker sedang dibuat.`)
                 await client.reply(from, `🍻 Quotes anda sedang di proses, ditunggu aja gan.`, id)
@@ -906,7 +909,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
         case 'arti':
             if (!args[0]) {
-                client.reply(from, '✅ *Contoh:* !arti rfpbot', id)
+                client.reply(from, '✅ *Contoh:* !arti mcprbot', id)
             } else {
                 console.log(`Sedang mencari arti nama anda.`)
                 await client.reply(from, `🍻 Permintaan anda sedang di proses, ditunggu aja gan.`, id)
