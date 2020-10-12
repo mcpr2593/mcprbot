@@ -12,22 +12,20 @@ Berikut adalah beberapa fitur yang ada pada bot ini!✨
 ⚜ *!encrypt* (Hash Menu)
 ⚜ *!info* (Info Owner Bot)
 ⚜ *!botinfo* (Status Bot)
-⚜ *!github* (Source Github)
-⚜ *!mwoner* (Menu Owner)
 
 📺 *Iklan* :
 
-✅ Order cheat pointblank bisa klik link *https://s.id/rbFC9*
-✅ Order jasa sosial media follower seperti ig, fb, yt, tiktok, dll bisa kontak di *https://s.id/rgokp*
+✅ Order Spotify Premium(20K) & Youtube Premium(5k) *https://bit.ly/30Zffzs*
+
 
 ♻️ Mau pasang iklan di *${BotName} ?*
-☎️ WA : *0852-8182-2916*
+☎️ WA : *0851-5683-3669*
   
 ⚠️ Gunakan dengan bijak ‼️
 ⚠️ Bot ini berjalan 24 Jam ‼️
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
+
   
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }
@@ -58,17 +56,16 @@ Berikut adalah beberapa fitur administrator yang ada pada bot ini!✨
 
 📺 *Iklan* :
 
-✅ Order cheat pointblank bisa klik link *https://s.id/rbFC9*
-✅ Order jasa sosial media follower seperti ig, fb, yt, tiktok, dll bisa kontak di *https://s.id/rgokp*
+✅ Order Spotify Premium(20K) & Youtube Premium(5k) *https://bit.ly/30Zffzs*
+
 
 ♻️ Mau pasang iklan di *${BotName} ?*
-☎️ WA : *0852-8182-2916*
+☎️ WA : *0851-5683-3669*
   
 ⚠️ Gunakan dengan bijak ‼️
 ⚠️ Bot ini berjalan 24 Jam ‼️
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
   
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }
@@ -119,17 +116,16 @@ exports.textTools = (BotName) => {
 
 📺 *Iklan* :
 
-✅ Order cheat pointblank bisa klik link *https://s.id/rbFC9*
-✅ Order jasa sosial media follower seperti ig, fb, yt, tiktok, dll bisa kontak di *https://s.id/rgokp*
+✅ Order Spotify Premium(20K) & Youtube Premium(5k) *https://bit.ly/30Zffzs*
+
 
 ♻️ Mau pasang iklan di *${BotName} ?*
-☎️ WA : *0852-8182-2916*
+☎️ WA : *0851-5683-3669*
   
 ⚠️ Gunakan dengan bijak ‼️
 ⚠️ Bot ini berjalan 24 Jam ‼️
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
   
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }
@@ -151,18 +147,17 @@ exports.textDownload = (BotName) => {
 
 📺 *Iklan* :
 
-✅ Order cheat pointblank bisa klik link *https://s.id/rbFC9*
-✅ Order jasa sosial media follower seperti ig, fb, yt, tiktok, dll bisa kontak di *https://s.id/rgokp*
+✅ Order Spotify Premium(20K) & Youtube Premium(5k) *https://bit.ly/30Zffzs*
+
 
 ♻️ Mau pasang iklan di *${BotName} ?*
-☎️ WA : *0852-8182-2916*
+☎️ WA : *0851-5683-3669*
   
 ⚠️ Gunakan dengan bijak ‼️
 ⚠️ Bot ini berjalan 24 Jam ‼️
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
-  
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
+
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }
 
@@ -184,8 +179,8 @@ exports.textEnc = (BotName) => {
 ⚠️ Gunakan dengan bijak ‼️
 ⚠️ Bot ini berjalan 24 Jam ‼️
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
+
   
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }
@@ -193,12 +188,11 @@ exports.textEnc = (BotName) => {
 exports.textInfo = (BotName) => {
     return `🔰 ---[ *CONTACT US ${BotName}* ]--- 🔰
 
-⚜ Author : *Restu Fadhilah*
+⚜ Author : *MCPR*
 ⚜ Build With : *Node JS*
-⚜ No Telp : *0852-8182-2916*
+⚜ No Telp : *0851-5683-3669*
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
 
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }
@@ -213,8 +207,7 @@ Owner Bot : 0852-8182-2916 (WA)
     
 Untuk kalian yang ingin berkontribusi dengan *${BotName}* bisa mampir ke github saya.
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
 
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }
@@ -232,17 +225,16 @@ exports.textOwner = (BotName) => {
 
 📺 *Iklan* :
 
-✅ Order cheat pointblank bisa klik link *https://s.id/rbFC9*
-✅ Order jasa sosial media follower seperti ig, fb, yt, tiktok, dll bisa kontak di *https://s.id/rgokp*
+✅ Order Spotify Premium(20K) & Youtube Premium(5k) *https://bit.ly/30Zffzs*
+
 
 ♻️ Mau pasang iklan di *${BotName} ?*
-☎️ WA : *0852-8182-2916*
+☎️ WA : *0851-5683-3669*
   
 ⚠️ Gunakan dengan bijak ‼️
 ⚠️ Bot ini berjalan 24 Jam ‼️
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
 
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }
@@ -264,7 +256,7 @@ exports.textReadme = (BotName) => {
 ▪️ Note: Balas/quote/reply pesan yang ingin kamu translate dengan *!translate en*
 ✅ Cek Corona For Home = *!corona*
 ▪️ Note: Kirimkan lokasimu lalu balas/quote/reply lokasi yang kamu kirim dengan *!corona*
-✅ Quotesmaker = *!quotesmaker random rfpbot i love you*
+✅ Quotesmaker = *!quotesmaker random mcprbot i love you*
 ▪️ Note: Untuk mengganti background kata "random" dapat diganti bahasa inggris lainnya. Contoh: (rain,love,river)
 ✅ Wikipedia = *!wiki presiden*
 ▪️ Note: Search artikel wikipedia dengan mengetikkan perintah *!wiki <query>*
@@ -305,17 +297,16 @@ exports.textReadme = (BotName) => {
 
 📺 *Iklan* :
 
-✅ Order cheat pointblank bisa klik link *https://s.id/rbFC9*
-✅ Order jasa sosial media follower seperti ig, fb, yt, tiktok, dll bisa kontak di *https://s.id/rgokp*
+✅ Order Spotify Premium(20K) & Youtube Premium(5k) *https://bit.ly/30Zffzs*
+
 
 ♻️ Mau pasang iklan di *${BotName} ?*
-☎️ WA : *0852-8182-2916*
+☎️ WA : *0851-5683-3669*
   
 ⚠️ Gunakan dengan bijak ‼️
 ⚠️ Bot ini berjalan 24 Jam ‼️
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
 
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }

@@ -256,7 +256,7 @@ exports.textReadme = (BotName) => {
 ▪️ Note: Balas/quote/reply pesan yang ingin kamu translate dengan *!translate en*
 ✅ Cek Corona For Home = *!corona*
 ▪️ Note: Kirimkan lokasimu lalu balas/quote/reply lokasi yang kamu kirim dengan *!corona*
-✅ Quotesmaker = *!quotesmaker random rfpbot i love you*
+✅ Quotesmaker = *!quotesmaker random mcprbot i love you*
 ▪️ Note: Untuk mengganti background kata "random" dapat diganti bahasa inggris lainnya. Contoh: (rain,love,river)
 ✅ Wikipedia = *!wiki presiden*
 ▪️ Note: Search artikel wikipedia dengan mengetikkan perintah *!wiki <query>*
