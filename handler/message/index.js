@@ -932,7 +932,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 shtlink(args.splice(0).join(' '))
                 .then(body => {
                     body.map(({ code, result }) => {
-                        let msg = `${result}`
+                        let msg = `🔰 ---[ *Short Link BY ${BotName}* ]--- 🔰\n\nSHort link : ${result}\n\n🔰 ---[ *POWERED BY ${BotName}* ]--- 🔰`
                         client.reply(from, msg, id).then(() => {
                         console.log(`Kata alay telah dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
                         }).catch((err) => console.log(err))
