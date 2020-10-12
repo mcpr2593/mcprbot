@@ -130,7 +130,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             await client.sendText(from, menuId.textOwner(BotName))
             break
         case 'readme':
-            await client.textReadme(from, menuId.textOwner(BotName))
+            await client.sendText(from, menuId.textReadme(BotName))
             break
         // End List Daftar Menu Bot
 
