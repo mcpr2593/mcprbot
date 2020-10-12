@@ -12,8 +12,6 @@ Berikut adalah beberapa fitur yang ada pada bot ini!✨
 ⚜ *!encrypt* (Hash Menu)
 ⚜ *!info* (Info Owner Bot)
 ⚜ *!botinfo* (Status Bot)
-⚜ *!github* (Source Github)
-⚜ *!mwoner* (Menu Owner)
 
 📺 *Iklan* :
 
@@ -181,8 +179,8 @@ exports.textEnc = (BotName) => {
 ⚠️ Gunakan dengan bijak ‼️
 ⚠️ Bot ini berjalan 24 Jam ‼️
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
+
   
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }
@@ -190,12 +188,11 @@ exports.textEnc = (BotName) => {
 exports.textInfo = (BotName) => {
     return `🔰 ---[ *CONTACT US ${BotName}* ]--- 🔰
 
-⚜ Author : *Restu Fadhilah*
+⚜ Author : *MCPR*
 ⚜ Build With : *Node JS*
-⚜ No Telp : *0852-8182-2916*
+⚜ No Telp : *0851-5683-3669*
 
-✳️ Official Grub [1] : https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9
-✳️ Official Grub [2] : https://chat.whatsapp.com/HbeAbABdKsF7yxFHAmvMwS
+✳️ Official Grub [1] : https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr
 
 🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
 }

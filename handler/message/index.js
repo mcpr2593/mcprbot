@@ -123,7 +123,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             client.sendText(from, pesan)
             break
         }
-        case 'github':
+        case 'githubsource':
             await client.sendText(from, menuId.textGithub(BotName))
             break
         case 'mowner':
