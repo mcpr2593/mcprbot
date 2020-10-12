@@ -21,7 +21,7 @@ Berikut adalah beberapa fitur yang ada pada bot ini!✨
 ✅ Order jasa sosial media follower seperti ig, fb, yt, tiktok, dll bisa kontak di *https://s.id/rgokp*
 
 ♻️ Mau pasang iklan di *${BotName} ?*
-☎️ WA : *0852-8182-2916*
+☎️ WA : *0851-5683-3669*
   
 ⚠️ Gunakan dengan bijak ‼️
 ⚠️ Bot ini berjalan 24 Jam ‼️
