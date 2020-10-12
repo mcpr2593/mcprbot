@@ -1054,7 +1054,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
         case 'shrtlink':
                 if (args.length === 1)  return await client.reply(from, 'Kirim perintah *!shrtlink https://google.com*', id)
-                const slink = await get.get('https://api.haipbis.xyz/bitly?url='+ args[1]).json()
+                const slink = await get.get('https://api.i-tech.id/tools/shorturl?key=xzYmRq-EYvmGr-117MD1-cKgfgI-s2kLbI&link='+ args[1]).json()
                 if (slink.error) return await client.reply(from, slink.error, id)
                 await client.reply(from, `ShortLink : ${slink.result}`, id)
             break
