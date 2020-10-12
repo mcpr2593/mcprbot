@@ -34,6 +34,11 @@ const {
 
 } = require('../../lib/tools')
 
+const {
+    animquotes
+
+} = require('../../lib/anim')
+
 const { menuId, menuEn } = require('./text') // Indonesian & English menu
 
 module.exports = msgHandler = async (client = new Client(), message) => {
@@ -80,6 +85,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         // Fiture Anti Spam Messages
         if (isCmd && msgFilter.isFiltered(from) && !isGroupMsg) { return console.log(color('[SPAM]', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname)) }
         if (isCmd && msgFilter.isFiltered(from) && isGroupMsg) { return console.log(color('[SPAM]', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(name || formattedTitle)) }
+        if (isCmd && msgFilter.isFiltered(from) && isGroupMsg) await client.sendText(from, menuId.textMenu('from', (pushname), 'in', (name || formattedTitle))
         if (!isCmd && !isGroupMsg) { return console.log('[RECV]', color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), 'Message from', color(pushname)) }
         if (!isCmd && isGroupMsg) { return console.log('[RECV]', color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), 'Message from', color(pushname), 'in', color(name || formattedTitle)) }
         if (isCmd && !isGroupMsg) { console.log(color('[EXEC]'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname)) }
@@ -291,7 +297,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             await client.reply(from, '✅ Sukses gan, semua member telah di kick.', id)
             break
         case 'botjoin':
-            if (!args[0]) client.reply(from, '✅ *Contoh:* !botjoin https://chat.whatsapp.com/C3Dq5bTtLWp4MdkTuTg7o9', id)
+            if (!args[0]) client.reply(from, '✅ *Contoh:* !botjoin https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr', id)
             const inviteCode = args[0].replace('https://chat.whatsapp.com/', '')
             const check = await client.inviteInfo(inviteCode)
             if (args[0].match(/(https:)/gi)) {
@@ -684,6 +690,9 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             const text = `🔰 -----[ *CEK LOKASI COVID-19* ]----- 🔰\n\nHasil pemeriksaan dari lokasi yang anda kirim adalah *${zoneStatus.status}* ${zoneStatus.optional}\n\nInformasi lokasi terdampak disekitar anda:\n${data}\n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
             client.sendText(from, text)
             break
+
+//ANIME
+
         case 'toxic':
             console.log(`Auto Toxic Sedang Dibuat.`)
             toxic().then(toxic => {
