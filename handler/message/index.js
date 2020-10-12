@@ -929,7 +929,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 client.reply(from, '✅ *Contoh:* !shtlink https://google.com', id)
             } else {
                 console.log(`Sedang membuat shortlink.`)
-                alay(args.splice(0).join(' '))
+                shtlink(args.splice(0).join(' '))
                 .then(body => {
                     body.map(({ code, result }) => {
                         let msg = `${result}`
