@@ -29,7 +29,8 @@ const {
     ssweb,
     jadwalTv,
     tvnow,
-    sleep
+    sleep,
+    shtlink
 
 } = require('../../lib/tools')
 
@@ -921,6 +922,26 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 .catch(err => client.reply(from, err))
             }
             break
+
+        case 'shtlink':
+            if (!args[0]) {
+                client.reply(from, '✅ *Contoh:* !shtlink https://google.com', id)
+            } else {
+                console.log(`Sedang membuat shortlink.`)
+                await client.reply(from, `🍻 Permintaan anda sedang di proses, ditunggu aja gan.`, id)
+                    arti(args.splice(0).join(' '))
+                    .then(result => {
+                        result.map(({ code, link }) => {
+                            let msg = `🔰 -----[ *Short Link BY ${BotName}* ]----- 🔰\n\nArti Nama :\n\n${result}\n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
+                            client.reply(from, msg, id).then(() => {
+                            console.log(`Arti nama telah dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
+                            })
+                        })
+                    })
+                    .catch(err => client.reply(from, err))
+                }
+                break
+
         case 'lirik':
             if (!args[0]) {
                 client.reply(from, '✅ *Contoh:* !lirik lathi', id)
@@ -1051,12 +1072,6 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 })
             })
             .catch(err => client.reply(from, err))
-            break
-        case 'shrtlink':
-                if (args.length === 1)  return await client.reply(from, 'Kirim perintah *!shrtlink https://google.com*', id)
-                const slink = await get.get('https://api.i-tech.id/tools/shorturl?key=xzYmRq-EYvmGr-117MD1-cKgfgI-s2kLbI&link='+ args[1]).json()
-                if (slink.error) return await client.reply(from, slink.error, id)
-                await client.reply(from, `ShortLink : ${slink.result}`, id)
             break
         case 'tts':
             if (!args[0]) {
