@@ -49,9 +49,9 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         const groupMembers = isGroupMsg ? await client.getGroupMembersId(groupId) : ''
         const isGroupAdmins = groupAdmins.includes(sender.id) || false
         const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
-        const ownerNumber = '6285281822916@c.us' // Nomor Owner Bot
-        const minMem = 200 // Minimal Member Grub
-        const BotName = 'RFP-BOT 😎' // Nama Bot Whatsapp
+        const ownerNumber = '6285156833669@c.us' // Nomor Owner Bot
+        const minMem = 30 // Minimal Member Grub
+        const BotName = 'MCPR_BOT 🤖' // Nama Bot Whatsapp
         const isOwner = sender.id === ownerNumber
         const isBlocked = blockNumber.includes(sender.id) === true
 
