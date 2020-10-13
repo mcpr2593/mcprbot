@@ -33,7 +33,7 @@ const start = (client = new Client()) => {
                 console.log('[INFO]', color(`Anda telah di invite grub. [ ${name} : ${ids.length} ]`, 'yellow'))
                 // conditions if the group members are less than 10 then the bot will leave the group
                 if (ids.length <= 5) {
-                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Minimal anggota grub agar bot dapat masuk adalah 40 member.').then(() => client.leaveGroup(id))
+                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Minimal anggota grub agar bot dapat masuk adalah 5 member.').then(() => client.leaveGroup(id))
                 } else {
                     client.sendText(id, `🔰 -----[ *WELCOME TO GRUB ‼️* ]----- 🔰\n\nHalo warga grup *${name}* 👋️\nJangan lupa baca deskripsi group terlebih dahulu, dan patuhi rules yang ada.\n\n🔱 *Rules Grub:*\n\n✅ Menghormati anggota satu sama lain.\n✅ Tidak diperkenankan mem-posting hal-hal yang berbau dan mengandung unsur Politik, SARA, Kontroversial, pornografi LGBT dan disturbing picture (dalam bentuk apapun)\n✅ Larangan memposting sesuatu yang  berdampak negatif bagi anggota lain.\n✅ Tidak bercanda berlebihan yang dapat memicu perdebatan.\n\n🔰 -----[ *POWERED BY RFP BOT 😎* ]----- 🔰`)
                 }
@@ -48,10 +48,12 @@ const start = (client = new Client()) => {
     })
 
     client.onIncomingCall((callData) => {
+        await client.sendText(call.peerJid, 'Maaf, saya tidak bisa menerima panggilan. nelfon = block!')
         console.log('[:]', color(`BLOCK USER SPAM TELP !`, 'red'))
         client.contactBlock(callData.peerJid)
     })
 }
+
 
 create('Imperial', options(true, start))
     .then((client) => start(client))
