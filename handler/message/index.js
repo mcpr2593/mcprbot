@@ -754,7 +754,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             pantunpakboy()
             .then(body => {
                 body.map(({ code, author, result }) => {
-                    let msg = `🔰 -----[ *RANDOM QUOTES 3 BY ${BotName}* ]----- 🔰\n\nHi, *${pushname}*! 👋️\n\nQuotes :\n\n " *${result}* " \n\nAuthor : ~*${author}* \n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
+                    let msg = `🔰 -----[ *PANTUN PAKBOY BY ${BotName}* ]----- 🔰\n\nHi, *${pushname}*! 👋️\nPantun Pakboy :\n\n " ${result} " \n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
                     client.reply(from, msg, id).then(() => {
                     console.log(`Random Quotes 3 Telah Dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
                     }).catch((err) => console.log(err))
