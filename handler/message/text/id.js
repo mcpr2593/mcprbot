@@ -76,6 +76,7 @@ exports.textTools = (BotName) => {
 ♻ Command / Perintah :
   
 ⚜ *!stiker / !stiker <url gambar>* (Stiker Maker)
+⚜ *!stiker nobg <url gambar>* (Stiker No background Maker)
 ⚜ *!stikergif <giphy url>* (Gif To Stiker)
 ⚜ *!meme <quote gambar>* (Meme Maker)
 ⚜ *!resi <kurir> <no resi>* (Lacak Resi)
@@ -247,6 +248,8 @@ exports.textReadme = (BotName) => {
 
 ✅ Stiker Maker = *!stiker*
 ▪️ Note: Kirim gambar dengan caption *!stiker* atau balas gambar yang sudah dikirim dengan *!stiker*
+✅ Stiker no background Maker = *!stiker nobg*
+▪️ Note: Kirim gambar dengan caption *!stiker nobg* atau balas gambar yang sudah dikirim dengan *!stiker nobg*
 ✅ Gif To Stiker = *!stikergif <Giphy URL>*
 ▪️ Note: Kirim pesan dengan format *!stikergif https://media.giphy.com/media/JUvI2c1ddyzkwK4RlV/giphy.gif*
 ✅ Meme Maker = *!meme text atas | text bawah*

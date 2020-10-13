@@ -17,7 +17,7 @@ const start = (client = new Client()) => {
     client.onMessage((message) => {
         client.getAmountOfLoadedMessages() // Cut message Cache if cache more than 3K
             .then((msg) => {
-                if (msg >= 2000) {
+                if (msg >= 10000) {
                     console.log('[:]', color(`Loaded Message Reach ${msg}, cuting message cache...`, 'yellow'))
                     client.cutMsgCache()
                 }
