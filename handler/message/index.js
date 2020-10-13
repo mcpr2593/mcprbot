@@ -776,11 +776,10 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                         ptl()
                         .then(body => {
                             body.map(({ code, result }) => {
-                                if (code == '200') {
-                                    client.sendFileFromUrl(from, ${result}, 'images.jpg', '🍻 Nih bro screenshootnya.').then(() => {
+                                    client.sendFileFromUrl(from, result, 'images.jpg', ).then(() => {
                                         console.log(`Gambar telah dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
                                     })
-                                }
+                                
                             })
                         })
                         .catch(err => client.reply(from, err))
