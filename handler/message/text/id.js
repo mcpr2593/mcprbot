@@ -72,7 +72,8 @@ Berikut adalah beberapa fitur administrator yang ada pada bot ini!✨
 
 exports.textTools = (BotName) => {
     return `🔰 -----[ *TOOLS MENU ${BotName}* ]----- 🔰
-  
+
+*Telfon = Block!*
 ♻ Command / Perintah :
   
 ⚜ *!stiker / !stiker <url gambar>* (Stiker Maker)
