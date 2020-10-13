@@ -764,20 +764,29 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             .catch(err => client.reply(from, err))
             break
 
-            
+
+            /*case 'cat':
+                q2 = Math.floor(Math.random() * 900) + 300;
+                q3 = Math.floor(Math.random() * 900) + 300;
+                client.sendFileFromUrl(from, 'http://placekitten.com/'+q3+'/'+q2, 'neko.png','')
+                break*/
+
+
             case 'ptl':
-                console.log(`Pantun Pakboy Sedang Dibuat.`)
+                console.log(`Sedang memproses gambar.`)
                 ptl()
                 .then(body => {
-                    body.map(({ code, author, result }) => {
-                        let msg = `🔰 -----[ *PANTUN PAKBOY BY ${BotName}* ]----- 🔰\n\nHi, *${pushname}*! 👋️\nPantun Pakboy :\n\n " ${result} " \n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
-                        client.sendFileFromUrl(from, msg, id).then(() => {
-                        console.log(`Pantun Pakboy  Telah Dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
-                        }).catch((err) => console.log(err))
+                    body.map(({ code, result }) => {
+                        if (code == '200') {
+                            client.sendFileFromUrl(from, result, 'images.jpg', '🍻 Nih bro screenshootnya.').then(() => {
+                                console.log(`Gambar telah dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
+                            })
+                        }
                     })
                 })
                 .catch(err => client.reply(from, err))
-                break
+            }
+            
 
         case 'hilih':
             if (!args[0]) {
