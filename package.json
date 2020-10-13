@@ -1,7 +1,7 @@
 {
-  "name": "RFP-BOT",
+  "name": "MCPR-BOT",
   "version": "10.0.0",
-  "description": "RFP-BOT WHATSAPP",
+  "description": "MCPR-BOT WHATSAPP",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
