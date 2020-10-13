@@ -772,21 +772,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 break*/
 
 
-            case 'ptl':
-                console.log(`Sedang memproses gambar.`)
-                ptl()
-                .then(body => {
-                    body.map(({ code, result }) => {
-                        if (code == '200') {
-                            client.sendFileFromUrl(from, result, 'images.jpg', '🍻 Nih bro screenshootnya.').then(() => {
-                                console.log(`Gambar telah dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
-                            })
-                        }
-                    })
-                })
-                .catch(err => client.reply(from, err))
-            }
-            break
+           
 
         case 'hilih':
             if (!args[0]) {
