@@ -617,7 +617,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             } else if (args.length === 1) {
                 if (!isUrl(url)) { await client.reply(from, '❌ Gambar tidak ditemukan.', id) }
                 client.sendStickerfromUrl(from, url).then((r) => (!r && r !== undefined)
-                    : client.sendText(from, '❌ Maaf, link yang kamu kirim tidak memuat gambar.')
+                    ? client.sendText(from, '❌ Maaf, link yang kamu kirim tidak memuat gambar.')
                     : client.reply(from, 'Nih Stickernya!')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
             } else {
                 await client.reply(from, '❌ Gambar tidak ditemukan. Untuk membuka daftar perintah kirim *!menu*', id)
