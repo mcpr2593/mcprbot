@@ -34,10 +34,6 @@ const {
 
 } = require('../../lib/tools')
 
-const {
-    animquotes
-
-} = require('../../lib/anim')
 
 const { menuId, menuEn } = require('./text') // Indonesian & English menu
 
