@@ -786,7 +786,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 })
                 .catch(err => client.reply(from, err))
             }
-            
+            break
 
         case 'hilih':
             if (!args[0]) {
