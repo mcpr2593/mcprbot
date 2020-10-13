@@ -79,6 +79,7 @@ exports.textTools = (BotName) => {
 ⚜ *!stikergif <giphy url>* (Gif To Stiker)
 ⚜ *!meme <quote gambar>* (Meme Maker)
 ⚜ *!resi <kurir> <no resi>* (Lacak Resi)
+⚜ *!shtlink <link>* (ShortLink Maker)
 ⚜ *!translate en <quote text>* (Google Translate)
 ⚜ *!corona* (Cek Corona For Home)
 ⚜ *!toxic* (Random Kata Toxic)
