@@ -34,6 +34,10 @@ const {
 
 } = require('../../lib/tools')
 
+const {
+    randomwibu
+} = require('../../lib/anim')
+
 
 const { menuId, menuEn } = require('./text') // Indonesian & English menu
 
@@ -607,6 +611,44 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             }
             break
         }
+
+        case 'stk':
+        case 'stk': {
+            if ((isMedia || isQuotedImage) && args.length === 0) {
+                const encryptMedia = isQuotedImage ? quotedMsg : message
+                const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
+                const mediaData = await decryptMedia(encryptMedia, uaOverride)
+                const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
+                client.sendImageAsSticker(from, imageBase64).then(() => {
+                    client.reply(from, 'Here\'s your sticker')
+                    console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
+                })
+            } else if (args[0] === 'nobg') {
+                /**
+                * This is Premium feature.
+                * Check premium feature at https://trakteer.id/red-emperor/showcase or chat Author for Information.
+                */
+                const encryptMedia = isQuotedImage ? quotedMsg : message
+                const mediaData = await decryptMedia(encryptMedia, uaOverride)
+                const mimetypes = isQuotedImage ? quotedMsg.mimetype : mimetype
+                const base64img = `data:${mimetypes};base64,${mediaData.toString('base64')}`
+                const base64imgnobg = await removebg(base64img)
+                return client.sendImageAsSticker(from, base64imgnobg)
+                 .then(() => {
+                     client.reply(from, 'Here\'s your sticker')
+        console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
+     })
+            } else if (args.length === 1) {
+                if (!isUrl(url)) { await client.reply(from, 'Maaf, link yang kamu kirim tidak valid. [Invalid Link]', id) }
+                client.sendStickerfromUrl(from, url).then((r) => (!r && r !== undefined)
+                    ? client.sendText(from, 'Maaf, link yang kamu kirim tidak memuat gambar. [No Image]')
+                    : client.reply(from, 'Here\'s your sticker')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
+            } else {
+                await client.reply(from, 'Tidak ada gambar! Untuk membuka daftar perintah kirim #menu [Wrong Format]', id)
+            }
+            break
+        }
+
         case 'stikergif': {
             if (args.length !== 1) return client.reply(from, '❌ Maaf, format yang anda masukkan salah atau tidak ditemukan.', id)
             const isGiphy = url.match(new RegExp(/https?:\/\/(www\.)?giphy.com/, 'gi'))
@@ -687,6 +729,19 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
 
 //ANIME
+
+        case 'randomwibu':
+            console.log(`Random Quotes 2 Sedang Dibuat.`)
+            quotes2()
+            .then(body => {
+                body.map(({ code, result }) => {
+                    let msg = `🔰 -----[ *RANDOM QUOTES 2 BY ${BotName}* ]----- 🔰\n\nHi, *${pushname}*! 👋️\n\nQuotes :\n\n " *${result}* " \n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
+                    client.reply(from, msg, id).then(() => {
+                    console.log(`Random Quotes 2 Telah Dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
+                    }).catch((err) => console.log(err))
+                })
+            })
+
 
         case 'toxic':
             console.log(`Auto Toxic Sedang Dibuat.`)
