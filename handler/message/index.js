@@ -31,7 +31,8 @@ const {
     tvnow,
     sleep,
     shtlink,
-    pantunpakboy
+    pantunpakboy,
+    ptl
 
 } = require('../../lib/tools')
 
@@ -762,6 +763,22 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             })
             .catch(err => client.reply(from, err))
             break
+
+
+        
+            case 'ptl':
+                console.log(`ptl  Sedang Diambil.`)
+                ptl()
+                .then(body => {
+                    body.map(({ code, author, result }) => {
+                        client.sendFileFromUrl(from, result, 'images.jpg', '🍻 Nih bro Penyegarnya.').then(() => {
+                            console.log(`Gambar telah dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
+                        }).catch((err) => console.log(err))
+                    })
+                })
+                .catch(err => client.reply(from, err))
+                break
+
         case 'hilih':
             if (!args[0]) {
                 client.reply(from, '✅ *Contoh:* !hilih anjay', id)
