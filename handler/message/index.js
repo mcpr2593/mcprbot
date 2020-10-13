@@ -30,7 +30,8 @@ const {
     jadwalTv,
     tvnow,
     sleep,
-    shtlink
+    shtlink,
+    pantunpakboy
 
 } = require('../../lib/tools')
 
