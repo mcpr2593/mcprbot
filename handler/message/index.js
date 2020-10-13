@@ -89,7 +89,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         // Fiture Anti Spam Messages
         msgFilter.addFilter(from)
         if (isBlocked) return
-        await client.sendText(from, ${args.length})
+        await client.sendText(from, (pushname))
         switch (command) {
 
         // Start List Daftar Menu Bot
