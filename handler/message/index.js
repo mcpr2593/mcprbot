@@ -85,7 +85,6 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         // Fiture Anti Spam Messages
         if (isCmd && msgFilter.isFiltered(from) && !isGroupMsg) { return console.log(color('[SPAM]', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname)) }
         if (isCmd && msgFilter.isFiltered(from) && isGroupMsg) { return console.log(color('[SPAM]', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(name || formattedTitle)) }
-        if (isCmd && msgFilter.isFiltered(from) && isGroupMsg) {await client.sendText(from, menuId.textMenu('from', (pushname), 'in', (name || formattedTitle))}
         if (!isCmd && !isGroupMsg) { return console.log('[RECV]', color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), 'Message from', color(pushname)) }
         if (!isCmd && isGroupMsg) { return console.log('[RECV]', color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), 'Message from', color(pushname), 'in', color(name || formattedTitle)) }
         if (isCmd && !isGroupMsg) { console.log(color('[EXEC]'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname)) }
@@ -94,7 +93,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         // Fiture Anti Spam Messages
         msgFilter.addFilter(from)
         if (isBlocked) return
-
+        await client.sendText(from, "coba")
         switch (command) {
 
         // Start List Daftar Menu Bot
