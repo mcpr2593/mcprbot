@@ -47,10 +47,12 @@ const start = (client = new Client()) => {
     client.onGlobalParicipantsChanged((event) => {
     })
 
-    client.onIncomingCall((callData) => {
-        await client.sendText(call.peerJid, 'Maaf, saya tidak bisa menerima panggilan. nelfon = block!')
-        .then(() =>client.contactBlock(callData.peerJid))
-    })
+  
+ // listening on Incoming Call
+ client.onIncomingCall(( async (call) => {
+    await client.sendText(call.peerJid, 'Maaf, saya tidak bisa menerima panggilan. nelfon = block!')
+    .then(() => client.contactBlock(call.peerJid))
+}))
 }
 
 
