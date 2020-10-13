@@ -772,18 +772,10 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 break*/
 
                 case 'ptl':
-            console.log(`Pantun Pakboy Sedang Dibuat.`)
-            ptls()
-            .then(body => {
-                body.map(({ code, result }) => {
-                    let msg = `🔰 -----[ *PANTUN PAKBOY BY ${BotName}* ]----- 🔰\n\nHi, *${pushname}*! 👋️\nPantun Pakboy :\n\n " ${result} " \n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
-                    client.reply(from, msg, id).then(() => {
-                    console.log(`Pantun Pakboy  Telah Dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
-                    }).catch((err) => console.log(err))
-                })
-            })
-            .catch(err => client.reply(from, err))
-            break
+                    const hn = await get('https://api.i-tech.id/tools/gambar?key=xzYmRq-EYvmGr-117MD1-cKgfgI-s2kLbI').json()
+                    await client.sendFileFromUrl(from, hn.url, id)
+                    break
+            
 
 
            
