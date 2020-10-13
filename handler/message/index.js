@@ -750,7 +750,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
         case 'pantunpakboy':
             console.log(`Random Quotes 3 Sedang Dibuat.`)
-            quotes3()
+            pantunpakboy()
             .then(body => {
                 body.map(({ code, author, result }) => {
                     let msg = `🔰 -----[ *RANDOM QUOTES 3 BY ${BotName}* ]----- 🔰\n\nHi, *${pushname}*! 👋️\n\nQuotes :\n\n " *${result}* " \n\nAuthor : ~*${author}* \n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
