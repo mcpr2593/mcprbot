@@ -704,7 +704,6 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             client.sendText(from, text)
             break
 
-//ANIME
         case 'toxic':
             console.log(`Auto Toxic Sedang Dibuat.`)
             toxic().then(toxic => {
@@ -737,6 +736,19 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             .catch(err => client.reply(from, err))
             break
         case 'quotes3':
+            console.log(`Random Quotes 3 Sedang Dibuat.`)
+            quotes3()
+            .then(body => {
+                body.map(({ code, author, result }) => {
+                    let msg = `🔰 -----[ *RANDOM QUOTES 3 BY ${BotName}* ]----- 🔰\n\nHi, *${pushname}*! 👋️\n\nQuotes :\n\n " *${result}* " \n\nAuthor : ~*${author}* \n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
+                    client.reply(from, msg, id).then(() => {
+                    console.log(`Random Quotes 3 Telah Dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
+                    }).catch((err) => console.log(err))
+                })
+            })
+            .catch(err => client.reply(from, err))
+            break
+        case 'pantunpakboy':
             console.log(`Random Quotes 3 Sedang Dibuat.`)
             quotes3()
             .then(body => {
