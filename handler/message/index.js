@@ -590,6 +590,8 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         // End Menu Downlaoder Bot
 
         // Start Menu Tools Bot
+//sticker & nobg  by mcpr
+        case 'sticker':
         case 'stiker': {
             if ((isMedia || isQuotedImage) && args.length === 0) {
                 const encryptMedia = isQuotedImage ? quotedMsg : message
@@ -597,37 +599,11 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 const mediaData = await decryptMedia(encryptMedia, uaOverride)
                 const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
                 client.sendImageAsSticker(from, imageBase64).then(() => {
-                console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
-                })
-
-            } else if (args.length === 1) {
-                if (!isUrl(url)) { await client.reply(from, '❌ Maaf, link atau url tidak valid.', id) }
-                client.sendStickerfromUrl(from, url).then((r) => (!r && r !== undefined)
-                ? client.sendText(from, '❌ Maaf, link yang kamu kirim tidak memuat gambar.')
-                : console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
-
-            } else {
-                await client.reply(from, '❌ Gambar tidak ditemukan.', id)
-            }
-            break
-        }
-
-        case 'stk':
-        case 'stk': {
-            if ((isMedia || isQuotedImage) && args.length === 0) {
-                const encryptMedia = isQuotedImage ? quotedMsg : message
-                const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
-                const mediaData = await decryptMedia(encryptMedia, uaOverride)
-                const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
-                client.sendImageAsSticker(from, imageBase64).then(() => {
-                    client.reply(from, 'Here\'s your sticker')
+                    client.reply(from, 'Nih Stickernya!')
                     console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
                 })
             } else if (args[0] === 'nobg') {
-                /**
-                * This is Premium feature.
-                * Check premium feature at https://trakteer.id/red-emperor/showcase or chat Author for Information.
-                */
+
                 const encryptMedia = isQuotedImage ? quotedMsg : message
                 const mediaData = await decryptMedia(encryptMedia, uaOverride)
                 const mimetypes = isQuotedImage ? quotedMsg.mimetype : mimetype
@@ -635,16 +611,16 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 const base64imgnobg = await removebg(base64img)
                 return client.sendImageAsSticker(from, base64imgnobg)
                  .then(() => {
-                     client.reply(from, 'Here\'s your sticker')
+                     client.reply(from, 'Nih Stickernya!')
         console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
      })
             } else if (args.length === 1) {
-                if (!isUrl(url)) { await client.reply(from, 'Maaf, link yang kamu kirim tidak valid. [Invalid Link]', id) }
+                if (!isUrl(url)) { await client.reply(from, '❌ Gambar tidak ditemukan.', id) }
                 client.sendStickerfromUrl(from, url).then((r) => (!r && r !== undefined)
-                    ? client.sendText(from, 'Maaf, link yang kamu kirim tidak memuat gambar. [No Image]')
-                    : client.reply(from, 'Here\'s your sticker')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
+                    ? client.sendText(from, '❌ Maaf, link yang kamu kirim tidak memuat gambar.')
+                    : client.reply(from, 'Nih Stickernya!')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
             } else {
-                await client.reply(from, 'Tidak ada gambar! Untuk membuka daftar perintah kirim #menu [Wrong Format]', id)
+                await client.reply(from, '❌ Gambar tidak ditemukan. Untuk membuka daftar perintah kirim *!menu*', id)
             }
             break
         }
