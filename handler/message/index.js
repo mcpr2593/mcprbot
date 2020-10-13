@@ -777,7 +777,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             .then(body => {
                 body.map(({ code, result }) => {
                     let msg = `${result}`
-                    client.sendFileFromUrl(from, msg, 'ptl.jpg').then(() => {
+                    client.sendFileFromUrl(from, msg).then(() => {
                     console.log(`Pantun Pakboy  Telah Dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
                     }).catch((err) => console.log(err))
                 })
