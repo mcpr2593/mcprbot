@@ -705,20 +705,6 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
 
 //ANIME
-
-        case 'randomwibu':
-            console.log(`Random Quotes 2 Sedang Dibuat.`)
-            quotes2()
-            .then(body => {
-                body.map(({ code, result }) => {
-                    let msg = `🔰 -----[ *RANDOM QUOTES 2 BY ${BotName}* ]----- 🔰\n\nHi, *${pushname}*! 👋️\n\nQuotes :\n\n " *${result}* " \n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
-                    client.reply(from, msg, id).then(() => {
-                    console.log(`Random Quotes 2 Telah Dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
-                    }).catch((err) => console.log(err))
-                })
-            })
-
-
         case 'toxic':
             console.log(`Auto Toxic Sedang Dibuat.`)
             toxic().then(toxic => {
