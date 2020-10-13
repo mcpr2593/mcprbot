@@ -771,7 +771,21 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 client.sendFileFromUrl(from, 'http://placekitten.com/'+q3+'/'+q2, 'neko.png','')
                 break*/
 
-
+                case 'ptl':
+                        console.log(`Sedang memproses link menjadi gambar.`)
+                        ptl()
+                        .then(body => {
+                            body.map(({ code, result }) => {
+                                if (code == '200') {
+                                    client.sendFileFromUrl(from, result, 'images.jpg', '🍻 Nih bro screenshootnya.').then(() => {
+                                        console.log(`Gambar telah dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
+                                    })
+                                }
+                            })
+                        })
+                        .catch(err => client.reply(from, err))
+                    
+                    break
            
 
         case 'hilih':
