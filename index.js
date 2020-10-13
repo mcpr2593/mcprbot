@@ -48,11 +48,10 @@ const start = (client = new Client()) => {
     })
 
     client.onIncomingCall((callData) => {
-        console.log('[:]', color(`BLOCK USER SPAM TELP !`, 'red'))
-        client.contactBlock(callData.peerJid)
+        await client.sendText(call.peerJid, 'Maaf, saya tidak bisa menerima panggilan. nelfon = block!')
+        .then(() =>client.contactBlock(callData.peerJid))
     })
 }
-
 
 
 
