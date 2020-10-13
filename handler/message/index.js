@@ -122,11 +122,8 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
         case 'botinfo': {
             const loadedMsg = await client.getAmountOfLoadedMessages()
-            const chatIds = await client.getAllChatIds()
             const groups = await client.getAllGroups()
-            const battery = await client.getBatteryLevel()
-            const charge = await client.getIsPlugged()
-            let pesan = `🔰 -----[ *STATUS ${BotName}* ]----- 🔰\n\n*Loaded Messages:* ${loadedMsg} Messages\n*Total Grub:* ${groups.length} Room Chats\n*Total Personal Chat:* ${chatIds.length - groups.length} Chats\n*Total Semua Chat:* ${chatIds.length} Chats\n*Total Battery:* ${battery}%\n*Status Charge:* ${charge}\n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
+            let pesan = `🔰 -----[ *STATUS ${BotName}* ]----- 🔰\n\n*Loaded Messages:* ${loadedMsg} Messages\n*Total Grub:* ${groups.length}\n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
             client.sendText(from, pesan)
             break
         }
@@ -142,6 +139,17 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         // End List Daftar Menu Bot
 
         // Start Menu Owner Bot
+        case 'botdetail': {
+            if (!isOwner) return await client.reply(from, '❌ Maaf, perintah ini hanya untuk Owner bot!', id)
+            const loadedMsg = await client.getAmountOfLoadedMessages()
+            const chatIds = await client.getAllChatIds()
+            const groups = await client.getAllGroups()
+            const battery = await client.getBatteryLevel()
+            const charge = await client.getIsPlugged()
+            let pesan = `🔰 -----[ *STATUS ${BotName}* ]----- 🔰\n\n*Loaded Messages:* ${loadedMsg} Messages\n*Total Grub:* ${groups.length} Room Chats\n*Total Personal Chat:* ${chatIds.length - groups.length} Chats\n*Total Semua Chat:* ${chatIds.length} Chats\n*Total Battery:* ${battery}%\n*Status Charge:* ${charge}\n\n🔰 -----[ *POWERED BY ${BotName}* ]----- 🔰`
+            client.sendText(from, pesan)
+            break
+        }
         case 'bc':
             if (!isOwner) return await client.reply(from, '❌ Maaf, perintah ini hanya untuk Owner bot!', id)
             let msgbc = body.slice(4)
