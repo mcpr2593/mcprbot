@@ -776,7 +776,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                         ptl()
                         .then(body => {
                             body.map(({ code, result }) => {
-                                    client.sendFileFromUrl(from, result, 'images.jpg', ).then(() => {
+                                    client.sendFileFromUrl(from, '${result}', 'images.jpg', ).then(() => {
                                         console.log(`Gambar telah dikirim. Loaded Processed for ${processTime(t, moment())} Second`)
                                     })
                                 
