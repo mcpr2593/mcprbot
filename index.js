@@ -33,9 +33,9 @@ const start = (client = new Client()) => {
                 console.log('[INFO]', color(`Anda telah di invite grub. [ ${name} : ${ids.length} ]`, 'yellow'))
                 // conditions if the group members are less than 10 then the bot will leave the group
                 if (ids.length <= 5) {
-                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Minimal anggota grub agar bot dapat masuk adalah 5 member.').then(() => client.leaveGroup(id))
+                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Silahkan chat Owner/Pemilik Bot.').then(() => client.leaveGroup(id))
                 } else {
-                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Minimal anggota grub agar bot dapat masuk adalah 5 member.').then(() => client.leaveGroup(id))
+                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Silahkan chat Owner/Pemilik Bot.').then(() => client.leaveGroup(id))
                 }
             }))
 
