@@ -306,6 +306,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             await client.reply(from, '✅ Sukses gan, semua member telah di kick.', id)
             break
         case 'botjoin':
+            if (!isOwner) return await client.reply(from, '❌ Untuk memasukan bot kedalam grub silahkan hubungi Ownerbot!', id)
             if (!args[0]) client.reply(from, '✅ *Contoh:* !botjoin https://chat.whatsapp.com/EGQi0gsIQXIKYrrSXJI3Zr', id)
             const inviteCode = args[0].replace('https://chat.whatsapp.com/', '')
             const check = await client.inviteInfo(inviteCode)
