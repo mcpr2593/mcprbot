@@ -634,7 +634,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                     ? client.sendText(from, '❌ Maaf, link yang kamu kirim tidak memuat gambar.')
                     : client.reply(from, 'Nih Stickernya!')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
             } else {
-                await client.reply(from, '❌ Gambar tidak ditemukan. Untuk membuka daftar perintah kirim *!menu*', id)
+                await client.reply(from, '❌ Perintah anda salah tidak ada sepasi setelah tanda *!*, id)
             }
             break
         }
