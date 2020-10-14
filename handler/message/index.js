@@ -607,6 +607,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         case 'sticker':
         case 'stiker': {
             if ((isMedia || isQuotedImage) && args.length === 0) {
+                await client.reply(from, `🍻 Stiker anda sedang di proses, ditunggu aja gan.`, id)
                 const encryptMedia = isQuotedImage ? quotedMsg : message
                 const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
                 const mediaData = await decryptMedia(encryptMedia, uaOverride)
