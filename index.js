@@ -32,10 +32,10 @@ const start = (client = new Client()) => {
             .then((ids) => {
                 console.log('[INFO]', color(`Anda telah di invite grub. [ ${name} : ${ids.length} ]`, 'yellow'))
                 // conditions if the group members are less than 10 then the bot will leave the group
-                if (ids.length <= 5) {
-                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Silahkan chat Owner/Pemilik Bot.').then(() => client.leaveGroup(id))
+                if (ids.length <= 10000) {
+                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Silahkan chat Owner/Pemilik Bot --> https://bit.ly/377u1Ik.').then(() => client.leaveGroup(id))
                 } else {
-                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Silahkan chat Owner/Pemilik Bot.').then(() => client.leaveGroup(id))
+                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Silahkan chat Owner/Pemilik Bot --> https://bit.ly/377u1Ik.').then(() => client.leaveGroup(id))
                 }
             }))
 
@@ -50,7 +50,7 @@ const start = (client = new Client()) => {
   
  // listening on Incoming Call
  client.onIncomingCall(( async (call) => {
-    await client.sendText(call.peerJid, 'Maaf, BOT tidak bisa menerima panggilan. nelfon = block!')
+    await client.sendText(call.peerJid, 'Maaf, BOT tidak bisa menerima panggilan. nelfon = block! /n Unblock? Silahkan chat Owner/Pemilik Bot --> https://bit.ly/377u1Ik.')
     .then(() => client.contactBlock(call.peerJid))
 }))
 }
