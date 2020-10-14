@@ -88,6 +88,7 @@ exports.textTools = (BotName) => {
 ⚜ *!quotes* (Quotes Versi 1)
 ⚜ *!quotes2* (Quotes Versi 2)
 ⚜ *!quotes3* (Quotes Versi 3)
+⚜ *!pantunpakboy* (Pantun Fakboy)
 ⚜ *!hilih <optional>* (Ubah Kata Hilih)
 ⚜ *!alay <optional>* (Ubah Kata Alay)
 ⚜ *!ninja <optional>* (Ubah Kata Ninja)
