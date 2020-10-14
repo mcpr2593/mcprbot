@@ -424,6 +424,9 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
         // End Menu Encrypt Bot
 
+        // Tagihan Bot
+        // End Menu Tagihan Bot
+
         // Start Menu Downloader Bot
         case 'tiktokdl':
             if (args.length !== 1) return client.reply(from, '❌ Maaf, format yang anda masukkan salah atau tidak ditemukan.', id)
@@ -613,7 +616,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                     console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
                 })
             } else if (args[0] === 'nobg') {
-
+                await client.reply(from, `🍻 Stiker anda sedang di proses, ditunggu aja gan.`, id)
                 const encryptMedia = isQuotedImage ? quotedMsg : message
                 const mediaData = await decryptMedia(encryptMedia, uaOverride)
                 const mimetypes = isQuotedImage ? quotedMsg.mimetype : mimetype
