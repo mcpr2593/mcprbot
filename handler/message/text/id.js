@@ -79,6 +79,7 @@ exports.textTools = (BotName) => {
 ⚜ *!stiker / !stiker <url gambar>* (Stiker Maker)
 ⚜ *!stiker nobg <url gambar>* (Stiker No background Maker)
 ⚜ *!stikergif <giphy url>* (Gif To Stiker)
+⚜ *!memestiker <Text atas> | <Teks Bawah>* (Sticker Text Meme)
 ⚜ *!meme <quote gambar>* (Meme Maker)
 ⚜ *!resi <kurir> <no resi>* (Lacak Resi)
 ⚜ *!shtlink <link>* (ShortLink Maker)
@@ -256,6 +257,8 @@ exports.textReadme = (BotName) => {
 ▪️ Note: Kirim pesan dengan format *!stikergif https://media.giphy.com/media/JUvI2c1ddyzkwK4RlV/giphy.gif*
 ✅ Meme Maker = *!meme text atas | text bawah*
 ▪️ Note: Kirim gambar dengan caption *!meme text atas | text bawah*
+✅ Meme Sticker Maker = *!memestiker text atas | text bawah*
+▪️ Note: Kirim gambar dengan caption *!memestiker text atas | text bawah*
 ✅ Lacak Resi = *!resi jne 1238757632*
 ▪️ Daftar Kurir: (jne, pos, tiki, wahana, jnt, rpx, sap, sicepat, pcp, jet, dse, first, ninja, lion, idl, rex)
 ✅ Google Translate = *!translate en*

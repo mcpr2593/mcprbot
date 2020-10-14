@@ -632,14 +632,16 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             } else if (args.length === 1) {
                 if (!isUrl(url)) { await client.reply(from, '❌ Gambar tidak ditemukan.', id) }
                 client.sendStickerfromUrl(from, url).then((r) => (!r && r !== undefined)
-                    ? client.sendText(from, '❌ Maaf, link yang kamu kirim tidak memuat gambar.')
+                    ? client.sendText(from, ' await client.reply(from, `🍻 Stiker anda sedang di proses, ditunggu aja gan.`, id)')
                     : client.reply(from, 'Nih Stickernya!')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
             } else {
                 await client.reply(from, '❌ Perintah anda salah tidak ada sepasi setelah tanda *!*', id)
             }
             break
         }
+        case 'memestiker':
         case 'memesticker':
+            await client.reply(from, `🍻 Stiker anda sedang di proses, ditunggu aja gan.`, id)
             if ((isMedia || isQuotedImage) && args.length >= 2) {
                 const top = arg.split('|')[0]
                 const bottom = arg.split('|')[1]
@@ -654,7 +656,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                         })
                         .catch((err) => console.error(err))
             } else {
-                await client.reply(from, 'Tidak ada gambar! Untuk membuka daftar perintah kirim !menu [Wrong Format]', id)
+                await client.reply(from, '❌ Maaf, format yang anda masukkan salah atau tidak ditemukan, Jika kurang jelas baca *!readme*.', id)
             }
             break
         case 'stikergif': {
