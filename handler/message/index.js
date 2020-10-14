@@ -165,7 +165,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             const allChats = await client.getAllChatIds()
             const allGroups = await client.getAllGroups()
             for (let gclist of allGroups) {
-                await client.sendText(gclist.contact.id, `❌ Maaf bot sedang pembersihan, total chat aktif : ${allChats.length}\n\n Kalian bisa menginvite kembali setelah bot ini keluar.`)
+                await client.sendText(gclist.contact.id, `❌ Maaf bot sedang pembersihan, total chat aktif : ${allChats.length}\n\n Kalian bisa menginvite kembali debngan cara menghubungi owner.`)
                 await client.leaveGroup(gclist.contact.id)
             }
             await client.reply(from, '✅ Sukses gan, bot telah keluar semua grub.', id)
