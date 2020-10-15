@@ -50,7 +50,7 @@ const start = (client = new Client()) => {
   
  // listening on Incoming Call
  client.onIncomingCall(( async (call) => {
-    await client.sendText(call.peerJid, 'Maaf, BOT tidak bisa menerima panggilan. nelfon = block! /n Unblock? Silahkan chat Owner/Pemilik Bot --> https://bit.ly/377u1Ik.')
+    await client.sendText(call.peerJid, 'Maaf, BOT tidak bisa menerima panggilan. nelfon = block! /n Unblock? Silahkan chat Owner/Pemilik Bot --> https://bit.ly/30Zffzs.')
     .then(() => client.contactBlock(call.peerJid))
 }))
 }
