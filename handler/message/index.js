@@ -235,7 +235,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             client.sendText(from, '✅ Sukses gan, bot telah dikeluarkan.').then(() => client.leaveGroup(groupId))
             break
         case 'add':
-            if (!isGroupMsg) return cl  qient.reply(from, '❌ Maaf, perintah hanya dapat dipakai di dalam grub!', id)
+            if (!isGroupMsg) return client.reply(from, '❌ Maaf, perintah hanya dapat dipakai di dalam grub!', id)
             if (!isBotGroupAdmins) return client.reply(from, '❌ Gagal gan, bot tidak punya akses sebagai admin.', id)
             await client.addParticipant(groupId, `${orang}@c.us`)
             await client.sendText(from, `✅ Sukses gan, *${args[0]}* berhasil di tambahkan.`)
