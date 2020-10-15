@@ -151,20 +151,13 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
         }
         case 'cgc':
-        if(!ispaid) return client.reply(from, 'Only paid users can use this commad', id)
-            arg = body.trim().split(' ')
+            if (!isOwner) return await client.reply(from, '❌ Maaf, perintah ini hanya untuk Owner bot!', id)
             const gcname = arg[1]
             client.createGroup(gcname, mentionedJidList)
             client.sendText(from, 'Group Created ✨️')
             break
         case 'bc':
-            case 'cgc':
-                if(!ispaid) return client.reply(from, 'Only paid users can use this commad', id)
-                    arg = body.trim().split(' ')
-                    const gcname = arg[1]
-                    client.createGroup(gcname, mentionedJidList)
-                    client.sendText(from, 'Group Created ✨️')
-                    break
+            if (!isOwner) return await client.reply(from, '❌ Maaf, perintah ini hanya untuk Owner bot!', id)
             let msgbc = body.slice(4)
             const chatz = await client.getAllChatIds()
             for (let ids of chatz) {
