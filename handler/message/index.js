@@ -1036,7 +1036,44 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 .catch(err => client.reply(from, err))
             }
             break
-
+        case 'profile':
+            var role = 'None'
+            if (isGroupMsg) {
+            if (!quotedMsg) {
+            var block = ban.includes(author)
+            var pic = await client.getProfilePicFromServer(author)
+            var namae = pushname
+            var sts = await client.getStatus(author)
+            var adm = isGroupAdmins
+            const { status } = sts
+            if (pic == undefined) {
+            var pfp = errorurl 
+            } else {
+            var pfp = pic
+            } 
+            await client.sendFileFromUrl(from, pfp, 'pfp.jpg', `*User Profile* ✨️ \n\n 🔖️ *Username: ${namae}*\n\n💌️ *User Info: ${status}*\n\n*💔️ Ban: ${block}*\n\n✨️ *Role: ${role}*\n\n 👑️ *Admin: ${adm}*`)
+            } else if (quotedMsg) {
+            var qmid = quotedMsgObj.sender.id
+            var block = ban.includes(qmid)
+            var pic = await client.getProfilePicFromServer(qmid)
+            var namae = quotedMsgObj.sender.name
+            var sts = await client.getStatus(qmid)
+            var adm = isGroupAdmins
+            const { status } = sts
+            if (pic == undefined) {
+            var pfp = errorurl 
+            } else {
+            var pfp = pic
+            } 
+            await client.sendFileFromUrl(from, pfp, 'pfo.jpg', `*User Profile* ✨️ \n\n 🔖️ *Username: ${namae}*\n💌️ *User Info: ${status}*\n*💔️ Ban: ${block}*\n✨️ *Role: ${role}*\n 👑️ *Admin: ${adm}*`)
+            }
+            }
+            break
+        case 'snk':
+            client.reply(from, snk, message.id)
+        default:
+            console.log(color('[UNLISTED]', 'red'), color(time, 'yellow'), 'Unregistered Command from', color(pushname))
+            break
 
         case 'lirik':
             if (!args[0]) {
