@@ -1119,35 +1119,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             q7 = Math.floor(Math.random() * 890) + 1;
             client.sendFileFromUrl(from, 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+q7+'.png','Pokemon.png',)
             break
-        case 'anime':
-            const keyword = message.body.replace('#anime', '')
-            try {
-            const data = await fetch(
-           `https://api.jikan.moe/v3/search/anime?q=${keyword}`
-            )
-            const parsed = await data.json()
-            if (!parsed) {
-              await client.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Sorry, Couldn\'t find the requested anime', id)
-              console.log("Sent!")
-              return null
-              }
-            const { title, synopsis, episodes, url, rated, score, image_url } = parsed.results[0]
-            const content = `*Anime Found!*
-✨️ *Title:* ${title}
-🎆️ *Episodes:* ${episodes}
-💌️ *Rating:* ${rated}
-❤️ *Score:* ${score}
-💚️ *Synopsis:* ${synopsis}
-🌐️ *URL*: ${url}`
-
-            const image = await bent("buffer")(image_url)
-            const base64 = `data:image/jpg;base64,${image.toString("base64")}`
-            client.sendImage(from, base64, title, content)
-           } catch (err) {
-             console.error(err.message)
-             await client.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Sorry, Couldn\'t find the requested anime')
-           }
-          break
+            
         case 'wall':
             switch (args[0]) {
                 case 'pubg':
