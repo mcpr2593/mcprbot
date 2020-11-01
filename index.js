@@ -4,12 +4,12 @@ const options = require('./utils/options')
 const msgHandler = require('./handler/message')
 
 const start = (client = new Client()) => {
-    console.log('[:] SELAMAT DATANG DI MCPR-BOT ^_^')
-    console.log('[:] WHATSAPP TELAH TERSAMBUNG !')
+    console.log('[DEV]', color('Red Emperor', 'yellow'))
+    console.log('[CLIENT] CLIENT Started!')
 
     // Force it to keep the current session
     client.onStateChanged((state) => {
-        console.log('[:] STATUS SAMBUNGAN :', state)
+        console.log('[Client State]', state)
         if (state === 'CONFLICT') client.forceRefocus()
     })
 
@@ -17,8 +17,8 @@ const start = (client = new Client()) => {
     client.onMessage((message) => {
         client.getAmountOfLoadedMessages() // Cut message Cache if cache more than 3K
             .then((msg) => {
-                if (msg >= 10000) {
-                    console.log('[:]', color(`Loaded Message Reach ${msg}, cuting message cache...`, 'yellow'))
+                if (msg >= 3000) {
+                    console.log('[CLIENT]', color(`Loaded Message Reach ${msg}, cuting message cache...`, 'yellow'))
                     client.cutMsgCache()
                 }
             })
@@ -30,12 +30,12 @@ const start = (client = new Client()) => {
     client.onAddedToGroup(({ groupMetadata: { id }, contact: { name } }) =>
         client.getGroupMembersId(id)
             .then((ids) => {
-                console.log('[INFO]', color(`Anda telah di invite grub. [ ${name} : ${ids.length} ]`, 'yellow'))
+                console.log('[CLIENT]', color(`Invited to Group. [ ${name} : ${ids.length}]`, 'yellow'))
                 // conditions if the group members are less than 10 then the bot will leave the group
-                if (ids.length <= 10000) {
-                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Silahkan chat Owner/Pemilik Bot --> https://bit.ly/377u1Ik.').then(() => client.leaveGroup(id))
+                if (ids.length <= 10) {
+                    client.sendText(id, 'Sorry, the minimum group member is 10 user to use this bot. Bye~').then(() => client.leaveGroup(id))
                 } else {
-                    client.sendText(id, '❌ Maaf, bot tidak dapat sembarangan masuk grub. Silahkan chat Owner/Pemilik Bot --> https://bit.ly/377u1Ik.').then(() => client.leaveGroup(id))
+                    client.sendText(id, `Hello group members *${name}*, thank you for inviting this bot, to see the bot menu send *#menu*`)
                 }
             }))
 
@@ -45,17 +45,13 @@ const start = (client = new Client()) => {
 
     // listen paricipant event on group (wellcome message)
     client.onGlobalParicipantsChanged((event) => {
+        // if (event.action === 'add') client.sendTextWithMentions(event.chat, `Hello, Welcome to the group @${event.who.replace('@c.us', '')} \n\nHave fun with us✨`)
     })
 
-  
- // listening on Incoming Call
- client.onIncomingCall(( async (call) => {
-    await client.sendText(call.peerJid, 'Maaf, BOT tidak bisa menerima panggilan. nelfon = block! /n Unblock? Silahkan chat Owner/Pemilik Bot --> https://bit.ly/30Zffzs.')
-    .then(() => client.contactBlock(call.peerJid))
-}))
+    client.onIncomingCall((callData) => {
+        // client.contactBlock(callData.peerJid)
+    })
 }
-
-
 
 create('Imperial', options(true, start))
     .then((client) => start(client))
